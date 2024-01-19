@@ -1,0 +1,8 @@
+*{
+	box-sizing: border-box;
+}
+
+.foot{
+	padding: 10px;
+	background-color: #F0F0F0;
+}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	{% for i in content %}
+				<div class="contentPiece">
+					<h1> {{ i.name }} </h1>
+					<p>Описание: {{ i.desc }}</p>
+					<p>Необходимые навыки: {{ i.skills }}</p>
+					<p>Компания: {{ i.employer.name }}</p>
+					<p>Оклад: {{ i.salary.from }}</p>
+					<p>Регион: {{ i.area.name }}</p>
+					<p>Дата публикации: {{ i.published_at }}</p>
+
+				</div> 
+	{% endfor %}
+{% endblock %}

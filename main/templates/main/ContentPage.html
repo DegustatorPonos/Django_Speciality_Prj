@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	{% for i in content %}
+				<div class="contentPiece">
+					<h1> {{ i.subtitle  }} </h1>
+					<p font-size=4>{{ i.value | safe }} </p>
+				</div> 
+	{% endfor %}
+{% endblock %}

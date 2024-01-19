@@ -1,0 +1,80 @@
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+	<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+        <meta charset="utf-8">
+        <title>{{ title }}</title>
+	<link rel="stylesheet" href="{% static 'css/style.css'%}">
+    </head>
+
+    <body> 
+        <header class="head">
+		<div class="menuHoriz">
+			<a href="https://vk.com/mynameisgennadiy">
+				<img src="{% static 'Icons/Home.png' %}" width=20px class="headElementPic">
+			</a>
+			<p class="headElementUnactive">Java developer</p>
+			<div class="headElementActive">C# developer</div>
+			<p class="headElementUnactive">Django developer</p>
+			<p class="headElementUnactive">HTML martyr</p>
+		</div>
+        </header>
+
+        <main class="mainMenuHoriz">
+		<div class="nav">
+            		<ul>
+				<li><div class="menuHoriz">
+					<a href="javascript:history.back()"> <img src="{% static 'Icons/folderUp.png' %}" width=13px> </a>
+					<a class="NavLinkElement" href="javascript:history.back()">..</a>
+				</div></li>
+
+				<li><div class="menuHoriz">
+					<a href="http://test1.bornukov.ru/"> <img src="{% static 'Icons/file.png' %}" width=13px>  </a>
+					<a class="NavLinkElement" href="http://test1.bornukov.ru/">Главная страница</a>
+				</div></li>
+
+				<li><div class="menuHoriz">
+					<a href="http://test1.bornukov.ru/"> <img src="{% static 'Icons/file.png' %}" width=13px> </a>
+					<a class="NavLinkElement" href="http://test1.bornukov.ru/relevance">Востребованность</a>
+				</div></li>
+				<li><div class="menuHoriz">
+					<a href="http://test1.bornukov.ru/"> <img src="{% static 'Icons/file.png' %}" width=13px> </a>
+					<a class="NavLinkElement" href="http://test1.bornukov.ru/geo">География</a>
+				</div></li>
+				<li><div class="menuHoriz">
+					<a href="http://test1.bornukov.ru/"> <img src="{% static 'Icons/file.png' %}" width=13px> </a>
+					<a class="NavLinkElement" href="http://test1.bornukov.ru/skills">Навыки</a>
+				</div></li>
+				<li><div class="menuHoriz">
+					<a href="http://test1.bornukov.ru/"> <img src="{% static 'Icons/folder.png' %}" width=13px> </a>
+					<a class="NavLinkElement" href="http://test1.bornukov.ru/recent">Последние вакансии</a>
+				</div></li>
+			</ul>
+		</div>
+		<div class="content">
+			<h1 class="contentTitle">{{ title }}</h1>
+			<div class="contentTitleUnderlineBox">
+				<p class="contentTitleUnderline">
+					<script> date = new Date().toLocaleDateString();
+        				document.write(date);</script>
+    				</p>
+				<p class="contentTitleUnderline">
+					<script> date = new Date().toLocaleTimeString();
+        				document.write(date);</script>
+				</p>
+			</div>
+			{% block content %} {% endblock %}
+		</div>
+        </main>
+
+        <footer class="foot menuHoriz zeropadding">
+			<p class="footitem">Физичников Геннадий БорисовичЪ</p>
+			<p class="footitem">РИ-220969</p>
+			<p class="footitem">Кодировка: UTF-8</p>
+			<p class="footitemwide">  </p>
+        </footer>
+    </body>
+</html>
+
+
